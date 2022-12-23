@@ -1,11 +1,12 @@
 import React from "react";
 import Contants from "expo-constants";
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import RepositoryList from "./RepositoryList";
 
 export default function Main() {
   return (
     <View style={{ marginTop: Contants.statusBarHeight, flexGrow: 1 }}>
-      <Text>Rate Repository Application</Text>
+      <RepositoryList />
     </View>
   );
 }

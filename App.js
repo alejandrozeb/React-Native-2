@@ -1,29 +1,7 @@
 import React from "react";
-import {
-  Alert,
-  StyleSheet,
-  Text,
-  View,
-  TouchableWithoutFeedback,
-} from "react-native";
+import { StyleSheet, View } from "react-native";
+import Main from "./src/components/Main";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <TouchableWithoutFeedback
-        onPress={() => Alert.alert("Hemos tocado el texto")}
-      >
-        <Text>Hola mundo</Text>
-      </TouchableWithoutFeedback>
-    </View>
-  );
+  return <Main />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

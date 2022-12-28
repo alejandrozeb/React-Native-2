@@ -21,6 +21,9 @@ const styles = StyleSheet.create({
   subheading: {
     fontWeight: theme.fontSizes.subheading,
   },
+  textAlignCenter: {
+    textAlign: 'center'
+  }
 });
 
 export default function StyledText({
@@ -28,6 +31,7 @@ export default function StyledText({
   color,
   fontsize,
   fontWeight,
+  align,
   style,
   ...restOfProps
 }) {
@@ -37,6 +41,7 @@ export default function StyledText({
     color === 'secondary' && styles.colorSecondary,
     fontsize === 'subheading' && styles.subheading,
     fontWeight === 'bold' && styles.bold,
+    align === 'center' && styles.textAlignCenter,
   ];
   return (
     <Text style={textStyles} {...restOfProps}>

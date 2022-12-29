@@ -1,11 +1,12 @@
 import React from "react";
-import Contants from "expo-constants";
 import { View } from "react-native";
 import RepositoryList from "./RepositoryList";
+import AppBar from "./AppBar";
 
 export default function Main() {
   return (
-    <View style={{ marginTop: Contants.statusBarHeight, flexGrow: 1 }}>
+    <View style={{ flexGrow: 1 }}>
+      <AppBar/>
       <RepositoryList />
     </View>
   );

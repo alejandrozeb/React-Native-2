@@ -2,6 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import StyledText from "./StyledText";
 import RepositoryStats from "./RepositoryStats";
+import theme from "../theme";
 
 const RepositoryItem = (props) => {
   return (
@@ -10,7 +11,7 @@ const RepositoryItem = (props) => {
         FullName: {props.fullName}
       </StyledText>
       <StyledText> Description: {props.description}</StyledText>
-      <StyledText> Language: {props.language}</StyledText>
+      <StyledText style={styles.language}> Language: {props.language}</StyledText>
       <RepositoryStats {...props} />
     </View>
   );
@@ -22,6 +23,14 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
     paddingTop: 5,
   },
+  language: {
+    padding: 4,
+    color: theme.colors.white,
+    backgroundColor: theme.colors.primary,
+    alignSelf: 'flex-start',
+    borderRadius: 4,
+    overflow: 'hidden'
+  }
 });
 
 export default RepositoryItem;

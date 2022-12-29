@@ -5,7 +5,7 @@ import theme from "../theme";
 const styles = StyleSheet.create({
   text: {
     fontSize: theme.fontSizes.body,
-    color: theme.colors.textPrimary,
+    color: theme.colors.primary,
     fontFamily: theme.fonts.main,
     fontWeight: theme.fontWeights.normal,
   },
@@ -42,6 +42,7 @@ export default function StyledText({
     fontsize === 'subheading' && styles.subheading,
     fontWeight === 'bold' && styles.bold,
     align === 'center' && styles.textAlignCenter,
+    style
   ];
   return (
     <Text style={textStyles} {...restOfProps}>
